@@ -1,0 +1,698 @@
+@charset "UTF-8";
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button, input, select {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+img, video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  padding: 0;
+}
+
+body {
+  background-color: #FFF5EE;
+}
+
+header {
+  width: 100%;
+  height: 150px;
+  background-color: #07152e;
+  display: flex;
+}
+header .logo {
+  width: 200px;
+  position: relative;
+  z-index: 10;
+  left: 0;
+}
+header .logo img {
+  width: 150px;
+  position: absolute;
+  top: -10px;
+  left: 0;
+}
+header .slide-text {
+  width: 50%;
+  color: #fff;
+  position: absolute;
+  left: 40%;
+  animation: transform 15s ease-in infinite;
+}
+@keyframes transform {
+  0% {
+    transform: translate(0, -50%);
+    opacity: 0;
+  }
+  15% {
+    transform: translate(0, 50%);
+    opacity: 0.5;
+  }
+  30% {
+    transform: translate(0, 65%);
+    opacity: 1;
+  }
+  45% {
+    transform: translate(0, 65%);
+    opacity: 1;
+  }
+  55% {
+    transform: translate(0%, 90%);
+    opacity: 1;
+  }
+  60% {
+    transform: translateX(0%, 200%);
+    opacity: 1;
+  }
+  80% {
+    transform: translateX(0%, 250%);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(0%, 300%);
+    opacity: 0;
+  }
+}
+@media only screen and (min-width:768px) {
+  @keyframes transform {
+    0% {
+      transform: translate(0%, -30%);
+      opacity: 0;
+    }
+    25% {
+      transform: translate(0%, 0%);
+      opacity: 1;
+    }
+    50% {
+      transform: translate(0%, 50%);
+      opacity: 1;
+    }
+    80% {
+      transform: translate(0%, 80%);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(0%, 100%);
+      opacity: 0;
+    }
+  }
+}
+header .slide-text p {
+  font-size: font-size 1.4rem;
+  font-family: "Open Sans";
+}
+header .slide-text p:nth-child(2) {
+  animation: transform-color 30s ease-in infinite;
+}
+@keyframes transform-color {
+  0% {
+    transform: translate(0%, -30%);
+    opacity: 0;
+    color: red;
+  }
+  25% {
+    transform: translate(0%, 0%);
+    opacity: 1;
+    color: #fff;
+  }
+  50% {
+    transform: translate(0%, 50%);
+    opacity: 1;
+    color: red;
+  }
+  80% {
+    transform: translate(0%, 80%);
+    opacity: 1;
+    color: #fff;
+  }
+  100% {
+    transform: translate(0%, 100%);
+    opacity: 0;
+    color: red;
+  }
+}
+
+main {
+  width: 100%;
+}
+main .container-top {
+  width: 100%;
+  /* min-width: 400px; */
+  height: 750px;
+  background-image: url(../src/image/piscine-dar-bibine.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+main .menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  height: 100%;
+}
+main .menu li, main .menu a {
+  padding-top: 10px;
+}
+@media only screen and (min-width:768px) {
+  main .menu {
+    display: flex;
+    flex-direction: row;
+  }
+  main .menu li,
+  main .menu a {
+    font-size: font-size 1rem;
+  }
+}
+main .menu .hidden {
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: font-size 3rem;
+}
+@media only screen and (min-width:768px) {
+  main .menu .hidden {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  main .menu .hidden {
+    padding-right: 70px;
+    padding-top: 50px;
+  }
+}
+main .menu .hidden a {
+  font-size: font-size 1.4rem;
+  font-family: "Duru Sans";
+  padding: 0 15px;
+  color: #07152e;
+  transition: 0.5s ease-in-out;
+}
+main .menu .hidden a:hover {
+  cursor: pointer;
+  color: red;
+}
+@media only screen and (min-width: 1024px) {
+  main .menu .hidden a:hover {
+    font-size: font-size 1.6rem;
+  }
+}
+main .checkbtn {
+  position: absolute;
+  right: 40px;
+  top: 50px;
+}
+main .checkbtn i {
+  font-size: font-size 2rem;
+}
+@media only screen and (min-width: 1024px) {
+  main .checkbtn {
+    display: none;
+  }
+}
+main .checked {
+  position: absolute;
+  right: 40px;
+  top: 40px;
+  height: 40px;
+  width: 40px;
+  opacity: 0;
+}
+main .checked:checked ~ .menu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 50%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.521);
+}
+@media only screen and (min-width: 1024px) {
+  main .checked {
+    display: none;
+  }
+}
+main #home {
+  color: red;
+}
+
+.container {
+  width: 100%;
+  height: 300px;
+  display: block;
+}
+@media only screen and (min-width:768px) {
+  .container {
+    width: 100%;
+    height: 300px;
+    display: flex;
+  }
+}
+.container .synagoge-ghriba {
+  width: 100%;
+  height: 50%;
+  background-image: url(../src/image/toit\ 3\ db.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+@media only screen and (min-width:768px) {
+  .container .synagoge-ghriba {
+    width: 50%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+}
+.container .djerba-hood {
+  width: 100%;
+  height: 50%;
+  background-image: url(../src/image/facade\ 2\ db.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+@media only screen and (min-width:768px) {
+  .container .djerba-hood {
+    width: 50%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .container .djerba-hood {
+    background-position: bottom;
+  }
+}
+.container .text {
+  width: 100%;
+  height: 50%;
+  margin: auto;
+}
+@media only screen and (min-width:768px) {
+  .container .text {
+    width: 50%;
+    height: 300px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.container .text h2,
+.container .text span a {
+  text-align: center;
+  padding-top: 10px;
+  color: gold;
+  font-family: "Open Sans";
+}
+@media only screen and (min-width: 1024px) {
+  .container .text h2,
+  .container .text span a {
+    font-size: font-size 1.6rem;
+  }
+}
+.container .text p {
+  line-height: 1.5;
+  text-align: justify;
+  overflow: auto;
+  font-size: font-size 0.8rem;
+  color: #07152e;
+  text-align: center;
+  margin: auto;
+  padding-top: 10px;
+  overflow: hidden;
+  font-family: "poppins";
+}
+@media only screen and (min-width:768px) {
+  .container .text p {
+    font-size: font-size 1.2rem;
+    line-height: 1.5;
+    text-align: justify;
+    overflow: auto;
+    padding: 0 10px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .container .text p {
+    font-size: font-size 1.4rem;
+    line-height: 1.5;
+    text-align: justify;
+    overflow: auto;
+    padding: 0 10px;
+  }
+}
+
+footer {
+  width: 100%;
+  height: 200px;
+  border-top: solid 2px #07152e;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+}
+footer .kontakt {
+  display: block;
+  margin: auto;
+}
+footer .kontakt h3 {
+  color: #07152e;
+  font-size: font-size 0.8rem;
+  font-family: "poppins";
+}
+@media only screen and (min-width:768px) {
+  footer .kontakt h3 {
+    color: #07152e;
+    font-size: font-size 1rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  footer .kontakt h3 {
+    color: #fff;
+  }
+}
+footer .kontakt p {
+  color: #07152e;
+  font-size: font-size 0.8rem;
+  font-family: "poppins";
+  line-height: 1;
+  text-align: justify;
+}
+footer .kontakt .icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: font-size 1rem;
+  padding-top: 10px;
+}
+@media only screen and (min-width:768px) {
+  footer .kontakt .icons p {
+    font-size: font-size 1rem;
+    padding-top: 15px;
+    color: #07152e;
+    font-family: "poppins";
+  }
+}
+@media only screen and (min-width: 1024px) {
+  footer .kontakt .icons p {
+    font-size: font-size 1rem;
+    padding-top: 25px;
+    color: var(--primary);
+  }
+}
+footer .kontakt .icons div {
+  padding: 20px 15px;
+}
+footer #map {
+  position: relative;
+  width: 25%; /* Breite später entsprechend anpassen */
+  height: 100%; /* Höhe später entsprechend anpassen */
+}
+footer #map a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  text-decoration: none;
+}
+footer #map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+header {
+  position: relative;
+}
+header .btn {
+  color: #07152e;
+  position: absolute;
+  padding: 20px;
+  position: fixed;
+  right: 0;
+  top: 250px;
+  background-color: gold;
+  z-index: 20;
+}
+header .btn a {
+  cursor: pointer;
+  padding: 10px;
+  font-size: 1.5rem;
+  font-family: "Duru Sans ";
+}
+
+.container-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  gap: 5px;
+}
+.container-grid .box {
+  background-color: #0062dc;
+  box-shadow: 0 0 15px rgb(46, 50, 102);
+}
+.container-grid .box img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.container-grid .box .box1 {
+  display: flex;
+  flex-direction: column;
+}
+.container-grid .box .box1 img {
+  width: 100%;
+  height: 50%;
+}
+.container-grid .box .box3 img, .container-grid .box .box9 img img, .container-grid .box .box17 img img img, .container-grid .box .box4 img img {
+  -o-object-position: left;
+     object-position: left;
+}
+.container-grid .box .box5 img {
+  -o-object-position: center;
+     object-position: center;
+}
+.container-grid .box .box9 img, .container-grid .box .box17 img img {
+  width: 100%;
+  height: 50%;
+}
+.container-grid .box .box14 img {
+  -o-object-position: top center;
+     object-position: top center;
+}
+.container-grid .box p {
+  color: white;
+  font-size: font-size 1.2rem;
+  font-family: "poppins";
+  text-align: center;
+}
+.container-grid .box h3 {
+  color: gold;
+  text-align: center;
+  font-size: font-size 1.2rem;
+  font-family: "poppins";
+}
+@media only screen and (min-width:768px) {
+  .container-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 5px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .container-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 5px;
+  }
+  .container-grid .box26 {
+    grid-area: 5/3/6/5;
+  }
+  .container-grid .box10 {
+    grid-area: 2/4/3/6;
+  }
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  /* background: linear-gradient(to bottom, #07152e, #0d3f7c); */
+}
+@media only screen and (min-width:768px) {
+  main .room-contain {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+main .room-contain .contain {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: solid 3px #07152e;
+  margin: 10px;
+  box-shadow: 5px 5px 10px #07152e;
+}
+@media only screen and (min-width:768px) {
+  main .room-contain .contain {
+    width: 40%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  main .room-contain .contain {
+    width: 40%;
+  }
+}
+main .room-contain .contain h2 {
+  padding-top: 50px;
+  color: #07152e;
+  font-size: font-size 1.6rem;
+  font-family: "Open Sans";
+  text-align: center;
+}
+main .room-contain .contain .room {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  gap: 4px;
+  margin: 20px;
+}
+main .room-contain .contain .room .box, main .room-contain .contain .room img {
+  width: 100%;
+  height: 100%;
+  transition: scale 1.5s ease-in 0.3s;
+}
+main .room-contain .contain .room .box:hover, main .room-contain .contain .room img:hover {
+  scale: 1.3;
+  border-radius: 5px;
+}
+main .room-contain .contain .room .box-1-1, main .room-contain .contain .room .box-3-1 {
+  grid-area: 1/1/4/2;
+}
+main .room-contain .contain .room .box-1-2, main .room-contain .contain .room .box-3-2 {
+  grid-area: 4/1/7/2;
+}
+main .room-contain .contain .room .box-1-3, main .room-contain .contain .room .box-3-3 {
+  grid-area: 7/1/10/2;
+}
+main .room-contain .contain .room .box-1-4, main .room-contain .contain .room .box-3-4 {
+  grid-area: 10/1/13/2;
+}
+main .room-contain .contain .room .box-1-5, main .room-contain .contain .room .box-3-5 {
+  grid-area: 1/2/7/3;
+}
+main .room-contain .contain .room .box-1-6, main .room-contain .contain .room .box-3-6 {
+  grid-area: 7/2/8/3;
+}
+main .room-contain .contain .room .box,
+main .room-contain .contain .room p {
+  font-family: "poppins";
+  font-size: 0.8rem;
+  color: #fff;
+  background-color: #07152e;
+  transition: scale 1.5s ease-in 0.3s;
+}
+main .room-contain .contain .room .box:hover,
+main .room-contain .contain .room p:hover {
+  scale: 1.3;
+  border-radius: 5px;
+  z-index: 5;
+}
+main .room-contain .contain .room .box-1-7, main .room-contain .contain .room .box-3-7 {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  grid-area: 8/2/13/3;
+}
+main .room-contain .contain .room .box-2-1, main .room-contain .contain .room .box-5-1, main .room-contain .contain .room .box-4-1 {
+  grid-area: 1/1/5/2;
+}
+main .room-contain .contain .room .box-2-2, main .room-contain .contain .room .box-5-2, main .room-contain .contain .room .box-4-2 {
+  grid-area: 5/1/8/2;
+}
+main .room-contain .contain .room .box-2-3, main .room-contain .contain .room .box-5-3, main .room-contain .contain .room .box-4-3 {
+  grid-area: 8/1/13/2;
+}
+main .room-contain .contain .room .box-2-4, main .room-contain .contain .room .box-5-4, main .room-contain .contain .room .box-4-4 {
+  grid-area: 1/2/7/3;
+}
+main .room-contain .contain .room .box-2-5, main .room-contain .contain .room .box-5-5, main .room-contain .contain .room .box-4-5 {
+  grid-area: 8/2/13/3;
+}
+main .room-contain .contain .room .box-2-6, main .room-contain .contain .room .box-5-6, main .room-contain .contain .room .box-4-6 {
+  grid-area: 7/2/8/3;
+}
+main .room-contain .contain .room .box-3-2 {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: bottom;
+     object-position: bottom;
+}
+main .room-contain .contain .room .box-3-4 {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 0px 600px;
+     object-position: 0px 600px;
+}
+main .room-contain .contain .room .box-3-7 {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}/*# sourceMappingURL=style.css.map */

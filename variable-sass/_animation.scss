@@ -1,0 +1,110 @@
+
+//.slide-text animation smartphones
+  @mixin animationTransformSmar {
+    @keyframes transform {
+        0% {
+          transform: translate(0, -50%);
+          opacity: 0;
+        }
+        15% {
+          transform: translate(0, 50%);
+          opacity: 0.5;
+        }
+        30% {
+          transform: translate(0, 65%);
+          opacity: 1;
+        }
+        45% {
+          transform: translate(0, 65%);
+          opacity: 1;
+        }
+        55% {
+          transform: translate(0%, 90%);
+          opacity: 1;
+        }
+        60% {
+          transform: translateX(0%, 200%);
+          opacity: 1;
+        }
+        80% {
+          transform: translateX(0%, 250%);
+          opacity: 0.5;
+        }
+      
+        100% {
+          transform: translate(0%, 300%);
+          opacity: 0;
+        }
+      }
+
+    
+  }
+
+
+
+
+
+//.slide-text animation smartphones
+@mixin animationTransformPc  {
+    @keyframes transform {
+        0% {
+            transform: translate(0%, -30%);
+            opacity: 0;
+          }
+          25% {
+            transform: translate(0%, 0%);
+            opacity: 1;
+          }
+          50% {
+            transform: translate(0%, 50%);
+            opacity: 1;
+          }
+          80% {
+            transform: translate(0%, 80%);
+            opacity: 1;
+          }
+          100% {
+            transform: translate(0%, 100%);
+            opacity: 0;
+          }
+      }
+
+    
+  }
+
+
+  //.slide-text animation color
+  @mixin animationColor{
+    animation: transform-color 30s ease-in infinite;
+    
+  @keyframes transform-color{
+
+    0% {
+      transform: translate(0%, -30%);
+      opacity: 0;
+      color: red;
+    }
+    25% {
+      transform: translate(0%, 0%);
+      opacity: 1;
+      color: #fff;
+    }
+    50% {
+      transform: translate(0%, 50%);
+      opacity: 1;
+      color: red;
+    }
+    80% {
+      transform: translate(0%, 80%);
+      opacity: 1;
+      color: #fff;
+    }
+    100% {
+      transform: translate(0%, 100%);
+      opacity: 0;
+      color: red;
+    }
+ 
+
+  }
+  }

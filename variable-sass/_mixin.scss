@@ -1,0 +1,83 @@
+//grid Smartphones für surrounding-are page
+
+@mixin gridContaineSmart ($column:repeat(2, 1fr) , $row:repeat(12, 1fr)) {
+  display: grid;
+  grid-template-columns: $column;
+  grid-template-rows: $row;
+  gap: 5px;
+  }
+
+
+  //grid tablet für surrounding-are page
+  @mixin gridContainerTablet ($column:repeat(4, 1fr) , $row:repeat(4, 1fr)) {
+    display: grid;
+    grid-template-columns: $column;
+    grid-template-rows: $row;
+    gap: 5px;
+    }
+      //grid PC für surrounding-are page
+  @mixin gridContainerPc ($column:repeat(6, 1fr) , $row:repeat(4, 1fr)) {
+    display: grid;
+    grid-template-columns: $column;
+    grid-template-rows: $row;
+    gap: 
+    5px;
+  }
+         //grid smartphones für rooms page
+         @mixin gridRooms($column: repeat(2, 1fr), $row: repeat(12, 1fr)) {
+          display: grid;
+          grid-template-columns: $column;
+          grid-template-rows: $row;
+          gap: 4px;
+      }
+    
+  //displkay :flex center
+  @mixin flex-center {
+    display: flex;
+    flex-direction: row;
+   
+  justify-content: center;
+  align-items: center;
+  }
+  //displkay :flex container-top
+  @mixin flex-contTop {
+    width: 100%;
+    /* min-width: 400px; */
+    height: 750px;
+    background-image: url(../src/image/piscine-dar-bibine.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+    //displkay :flex space-between
+    @mixin flex-space-between {
+          display: flex;
+          flex-direction: row;
+      justify-content: space-between;
+      position: relative;
+    }
+     //displkay :flex space-between
+    @mixin d-hood-and-synag {
+      width: 50%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+}
+     //displkay :flex column
+     @mixin column-center{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      
+}
+
+// footer .icons
+@mixin footer-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+// footer #map a
