@@ -288,6 +288,9 @@ main #home {
     height: 300px;
     display: flex;
   }
+  .container:nth-child(2) {
+    flex-direction: row-reverse;
+  }
 }
 .container .synagoge-ghriba {
   width: 100%;
@@ -608,7 +611,7 @@ main .room-contain .contain h2 {
 main .room-contain .contain .room {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 90px);
   gap: 4px;
   margin: 20px;
 }

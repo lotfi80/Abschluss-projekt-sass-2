@@ -24,7 +24,7 @@
     5px;
   }
          //grid smartphones für rooms page
-         @mixin gridRooms($column: repeat(2, 1fr), $row: repeat(12, 1fr)) {
+         @mixin gridRooms($column: repeat(2, 1fr), $row: repeat(12, 90px)) {
           display: grid;
           grid-template-columns: $column;
           grid-template-rows: $row;

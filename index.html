@@ -1,142 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dar-Bibine Sass</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script
-    src="https://kit.fontawesome.com/f4db7680b5.js"
-    crossorigin="anonymous"
-  ></script>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Duru+Sans&family=Ephesis&family=Open+Sans:ital,wght@0,300;0,400;1,300;1,400&family=Pacifico&family=Rubik+Bubbles&display=swap"
-    rel="stylesheet"
-  />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Duru+Sans&family=Noto+Serif+Georgian:wght@400;500&family=Open+Sans:ital@0;1&family=Poppins&family=Quicksand:wght@400;500&display=swap"
-    rel="stylesheet"
-  />
-</head>
-<body>
-
+      src="https://kit.fontawesome.com/f4db7680b5.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Duru+Sans&family=Ephesis&family=Open+Sans:ital,wght@0,300;0,400;1,300;1,400&family=Pacifico&family=Rubik+Bubbles&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Duru+Sans&family=Noto+Serif+Georgian:wght@400;500&family=Open+Sans:ital@0;1&family=Poppins&family=Quicksand:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <!-- header -->
     <header>
-        <div class="logo">
-          <img src="./src/image/Logo-DB.new.png" alt="logo dar bibine" />
-        </div>
-        <div class="slide-text">
+      <div class="logo">
+        <img src="./src/image/Logo-DB.new.png" alt="logo dar bibine" />
+      </div>
+      <div class="slide-text">
+        <p>Great offer prices for the month of January.</p>
+        <p>Book now</p>
+      </div>
+    </header>
+    <!-- main -->
+
+    <main>
+      <section class="container-top">
+        <label for="checked" class="checkbtn">
+          <i class="fa-solid fa-bars fa-xl" style="color: #07152e"></i>
+        </label>
+        <input type="checkbox" class="checked" />
+
+        <nav class="menu">
+          <ul class="hidden">
+            <li><a id="home" href="">HOME</a></li>
+            <li>
+              <a href="/index-sur-area.html">surrounding area</a>
+            </li>
+            <li><a href="/index-rooms.html">Rooms</a></li>
+            <li><a href="./Galery/index-3.html">Galery</a></li>
+            <li><a href="/kontakt-Seite/index-4.html">Kontakt</a></li>
+          </ul>
+        </nav>
+      </section>
+
+      <section class="container middle">
+        <div class="text">
+          <h2>La Ghriba</h2>
           <p>
-            Great offer prices for the month of January.</p>
-            <p>Book now</p>  
+            Erriadh is the old Hara Seghira. This village was formerly only
+            peopled with Jews looking, according to the local tradition, for a
+            shelter in Djerba after the destruction in Jerusalem in the VI th
+            century BC of Salomon Temple. Today, in this peaceful village close
+            to La Ghriba, Jews and Muslims are living near each other with a
+            mutual respect....<span><a href="#">merh lesen</a></span>
+          </p>
         </div>
-        
-      </header>
-      <!-- main -->
 
-      <main>
-        <section class="container-top">
-          <label for="checked" class="checkbtn">
-            <i class="fa-solid fa-bars fa-xl" style="color: #07152e"></i>
-          </label>
-          <input type="checkbox" class="checked" />
-  
-          <nav class="menu">
-            <ul class="hidden">
-              <li><a id="home" href="">HOME</a></li>
-              <li>
-                <a href="/index-sur-area.html">surrounding area</a>
-              </li>
-              <li><a href="/index-rooms.html">Rooms</a></li>
-              <li><a href="./Galery/index-3.html">Galery</a></li>
-              <li><a href="/kontakt-Seite/index-4.html">Kontakt</a></li>
-            </ul>
-          </nav>
-        </section>
-  
-        <section class="container middle">
-          <div class="text">
-            <h2>La Ghriba</h2>
-            <p>
-              Erriadh is the old Hara Seghira. This village was formerly only
-              peopled with Jews looking, according to the local tradition, for a
-              shelter in Djerba after the destruction in Jerusalem in the VI th
-              century BC of Salomon Temple. Today, in this peaceful village close
-              to La Ghriba, Jews and Muslims are living near each other with a
-              mutual respect....<span><a href="#">merh lesen</a></span>
-            </p>
-          </div>
-  
-          <div class="synagoge-ghriba"></div>
-        </section>
-        <section class="container" id="bottom">
-          <div class="text">
-            <h2>Djerba Hood</h2>
-            <p>
-              Djerbahood was a street art event in which artists from all over the
-              world gathered in the village of Erriadh on the Tunisian island
-              Djerba to create 250 mural paintings....<span
-                ><a href="#">mehr lesen</a></span
-              >
-            </p>
-          </div>
-  
-          <div class="djerba-hood"></div>
-        </section>
+        <div class="synagoge-ghriba"></div>
+      </section>
+      <section class="container" id="bottom">
+        <div class="text">
+          <h2>Djerba Hood</h2>
+          <p>
+            Djerbahood was a street art event in which artists from all over the
+            world gathered in the village of Erriadh on the Tunisian island
+            Djerba to create 250 mural paintings....<span
+              ><a href="#">mehr lesen</a></span
+            >
+          </p>
+        </div>
+
+        <div class="djerba-hood"></div>
+      </section>
     </main>
-
+    <!-- Footer -->
     <footer>
-        <div class="kontakt">
-          <h3>DAR BIBINE • RUE ABDEL WAHAB 7 • ERRIADH • DJERBA • TUNISIE</h3>
-          <div class="icons">
-            <div>
-              <a
-                href="https://www.facebook.com/darbibine/?locale=de_DE"
-                target="_blank"
-                ><i class="fa-brands fa-facebook fa-lg" style="color: #2a497e"></i
-              ></a>
-            </div>
-            <div>
-              <a href="https://www.instagram.com/darbibine/" target="_blank"
-                ><i class="fa-brands fa-instagram" style="color: #bc1a99"></i
-              ></a>
-            </div>
-            <div>
-              <a
-                href="https://www.tiktok.com/@guesthouses_tunisia"
-                target="_blank"
-                ><i class="fa-brands fa-tiktok fa-lg" style="color: #1e2227"></i
-              ></a>
-            </div>
-            <p>&copy; 2023 Dar bibine. All rights reserved.</p>
+      <div class="kontakt">
+        <h3>DAR BIBINE • RUE ABDEL WAHAB 7 • ERRIADH • DJERBA • TUNISIE</h3>
+        <div class="icons">
+          <div>
+            <a
+              href="https://www.facebook.com/darbibine/?locale=de_DE"
+              target="_blank"
+              ><i class="fa-brands fa-facebook fa-lg" style="color: #2a497e"></i
+            ></a>
           </div>
+          <div>
+            <a href="https://www.instagram.com/darbibine/" target="_blank"
+              ><i class="fa-brands fa-instagram" style="color: #bc1a99"></i
+            ></a>
+          </div>
+          <div>
+            <a
+              href="https://www.tiktok.com/@guesthouses_tunisia"
+              target="_blank"
+              ><i class="fa-brands fa-tiktok fa-lg" style="color: #1e2227"></i
+            ></a>
+          </div>
+          <p>&copy; 2023 Dar bibine. All rights reserved.</p>
         </div>
-        <div id="map">
-          <a
-            href="https://www.google.com/maps/place/Dar+Bibine/@33.8235388,10.84953,15z/data=!4m9!3m8!1s0x13aabb1a514ca6a9:0x3fc3e456c19623b1!5m2!4m1!1i2!8m2!3d33.8207442!4d10.8550222!16s%2Fg%2F1tjjfsmf?entry=ttu"
-            target="_blank"
-          ></a>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d212256.52348309645!2d10.893748350000001!3d33.7733729!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13aabc09046e9991%3A0x6830d5301a39ca66!2sDjerba!5e0!3m2!1sde!2slu!4v1702314875240!5m2!1sde!2slu"
-            width="600"
-            height="450"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
-      </footer>
-
-
-
-
-    
-</body>
+      </div>
+      <div id="map">
+        <a
+          href="https://www.google.com/maps/place/Dar+Bibine/@33.8235388,10.84953,15z/data=!4m9!3m8!1s0x13aabb1a514ca6a9:0x3fc3e456c19623b1!5m2!4m1!1i2!8m2!3d33.8207442!4d10.8550222!16s%2Fg%2F1tjjfsmf?entry=ttu"
+          target="_blank"
+        ></a>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d212256.52348309645!2d10.893748350000001!3d33.7733729!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13aabc09046e9991%3A0x6830d5301a39ca66!2sDjerba!5e0!3m2!1sde!2slu!4v1702314875240!5m2!1sde!2slu"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </footer>
+  </body>
 </html>
