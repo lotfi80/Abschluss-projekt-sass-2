@@ -14,6 +14,7 @@ header {
   height: 150px;
   background-color: $primary;
   display: flex;
+  position: relative;
 
   .logo {
     width: 200px;
@@ -47,6 +48,22 @@ header {
       }
     }
   }
+  .btn {
+    color: #07152e;
+    position: absolute;
+    padding: 20px;
+    position: fixed;
+    right: 0;
+    top: 250px;
+    background-color: gold;
+    z-index: 20;
+    a {
+      cursor: pointer;
+      padding: 10px;
+      font-size: 1.5rem;
+      font-family: "Duru Sans ";
+    }
+  }
 }
 
 //main
@@ -65,6 +82,7 @@ main {
     a {
       padding-top: 10px;
     }
+  
 
     @media #{$medium-up} {
       display: flex;
@@ -73,6 +91,7 @@ main {
       a {
         font-size: $font-xxl;
       }
+   
     }
     .hidden {
       margin-top: 10px;
@@ -112,7 +131,7 @@ main {
     i {
       font-size: $font-xl;
     }
-    @media #{$large-up} {
+    @media #{$medium-up} {
       display: none;
     }
   }
@@ -309,25 +328,7 @@ footer {
 }
 
 // Index-surrounding-area page 2
-header {
-  position: relative;
-  .btn {
-    color: #07152e;
-    position: absolute;
-    padding: 20px;
-    position: fixed;
-    right: 0;
-    top: 250px;
-    background-color: gold;
-    z-index: 20;
-    a {
-      cursor: pointer;
-      padding: 10px;
-      font-size: 1.5rem;
-      font-family: "Duru Sans ";
-    }
-  }
-}
+
 
 .container-grid {
   @include gridContaineSmart;
@@ -337,6 +338,7 @@ header {
 
     img {
       object-fit: cover;
+      object-position: center;
       width: 100%;
       height: 100%;
     }
@@ -424,16 +426,30 @@ main {
         width: 40%;
       }
       h2 {
+        
         padding-top: 50px;
         color: $primary;
         font-size: $font-l;
         font-family: "Open Sans";
         text-align: center;
+        position: relative;
+        
+        &:after{
+          content: "";
+          width: 0;
+          height: 0;
+          border-top: 5px solid $primary ;
+          border-left: 10px solid transparent;
+          border-right: 10px solid transparent;
+          position: absolute;
+          bottom: -5px;
+          left: calc(48% );
+          }
       }
       .room {
         @include gridRooms;
         margin: 20px;
-        .box,
+        .box
         img {
           width: 100%;
           height: 100%;
@@ -583,9 +599,30 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-bottom: solid $primary 2px;
+  h2{
+    font-size: $font-l;
+    margin: 40px 0;
+    padding: 10px 50px;
+    border: solid $primary 2px;
+    position: relative;
+    &:after{
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 5px solid $primary ;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    position: absolute;
+    bottom: -20px;
+    left: calc(45% );
+    }
+  }
   .pc{
     width: 100%;
-    border: solid red 2px;
+   
+    
+   
     @media #{$medium-up} {
       display: flex;
       flex-direction: row;
@@ -679,11 +716,13 @@ main {
    
   }
   .text {
-    width: 70%;
+    width: 50%;
     margin: auto;
     background-color: #07152e;
-    margin-top: 50px;
+    margin: 50px 0;
     box-shadow: 5px 5px 20px #07152e;
+    
+    
     p {
     width: 50%;
     margin: auto;

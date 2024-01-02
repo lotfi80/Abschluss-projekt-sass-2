@@ -53,6 +53,7 @@ header {
   height: 150px;
   background-color: #07152e;
   display: flex;
+  position: relative;
 }
 header .logo {
   width: 200px;
@@ -157,6 +158,22 @@ header .slide-text p:nth-child(2) {
     color: red;
   }
 }
+header .btn {
+  color: #07152e;
+  position: absolute;
+  padding: 20px;
+  position: fixed;
+  right: 0;
+  top: 250px;
+  background-color: gold;
+  z-index: 20;
+}
+header .btn a {
+  cursor: pointer;
+  padding: 10px;
+  font-size: 1.5rem;
+  font-family: "Duru Sans ";
+}
 
 main {
   width: 100%;
@@ -238,7 +255,7 @@ main .checkbtn {
 main .checkbtn i {
   font-size: 2rem;
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width:768px) {
   main .checkbtn {
     display: none;
   }
@@ -464,26 +481,6 @@ footer #map iframe {
   border: 0;
 }
 
-header {
-  position: relative;
-}
-header .btn {
-  color: #07152e;
-  position: absolute;
-  padding: 20px;
-  position: fixed;
-  right: 0;
-  top: 250px;
-  background-color: gold;
-  z-index: 20;
-}
-header .btn a {
-  cursor: pointer;
-  padding: 10px;
-  font-size: 1.5rem;
-  font-family: "Duru Sans ";
-}
-
 .container-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -497,6 +494,8 @@ header .btn a {
 .container-grid .box img {
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
   width: 100%;
   height: 100%;
 }
@@ -601,6 +600,18 @@ main .room-contain .contain h2 {
   font-size: 1.6rem;
   font-family: "Open Sans";
   text-align: center;
+  position: relative;
+}
+main .room-contain .contain h2:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 5px solid #07152e;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  position: absolute;
+  bottom: -5px;
+  left: 48%;
 }
 main .room-contain .contain .room {
   display: grid;
@@ -609,14 +620,12 @@ main .room-contain .contain .room {
   gap: 4px;
   margin: 20px;
 }
-main .room-contain .contain .room .box,
-main .room-contain .contain .room img {
+main .room-contain .contain .room .box img {
   width: 100%;
   height: 100%;
   transition: scale 1.5s ease-in 0.3s;
 }
-main .room-contain .contain .room .box:hover,
-main .room-contain .contain .room img:hover {
+main .room-contain .contain .room .box img:hover {
   scale: 1.3;
   border-radius: 5px;
 }
@@ -701,10 +710,28 @@ main .room-contain .contain .room .box-3-7 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-bottom: solid #07152e 2px;
+}
+.contain-galery h2 {
+  font-size: 1.6rem;
+  margin: 40px 0;
+  padding: 10px 50px;
+  border: solid #07152e 2px;
+  position: relative;
+}
+.contain-galery h2:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 5px solid #07152e;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  position: absolute;
+  bottom: -20px;
+  left: 45%;
 }
 .contain-galery .pc {
   width: 100%;
-  border: solid red 2px;
 }
 @media only screen and (min-width:768px) {
   .contain-galery .pc {
@@ -814,10 +841,10 @@ main .room-contain .contain .room .box-3-7 {
   background-color: #07152e;
 }
 .contain-galery .text {
-  width: 70%;
+  width: 50%;
   margin: auto;
   background-color: #07152e;
-  margin-top: 50px;
+  margin: 50px 0;
   box-shadow: 5px 5px 20px #07152e;
 }
 .contain-galery .text p {
