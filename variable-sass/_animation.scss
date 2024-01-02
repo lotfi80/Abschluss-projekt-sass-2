@@ -1,38 +1,71 @@
 
 //.slide-text animation smartphones
+ //@mixin animationTransformSmar {
+    //@keyframes transform {
+      //  0% {
+       //   transform: translate(0, -50%);
+      //    opacity: 0;
+      //  }
+      //  15% {
+       //   transform: translate(0, 50%);
+       //   opacity: 0.5;
+       // }
+        //30% {
+        //  transform: translate(0, 65%);
+        //  opacity: 1;
+        //}
+        //45% {
+       //   transform: translate(0, 65%);
+       //   opacity: 1;
+       // }
+       // 55% {
+        //  transform: translate(0%, 90%);
+        //  opacity: 1;
+        //}
+        //60% {
+        //  transform: translateX(0%, 200%);
+        // opacity: 1;
+        //}
+       // 80% {
+        //  transform: translateX(0%, 250%);
+        //  opacity: 0.5;
+        //}
+      
+        //100% {
+        //  transform: translate(0%, 300%);
+         // opacity: 0;
+        //}
+      //}
+
+    
+  //}
   @mixin animationTransformSmar {
     @keyframes transform {
         0% {
-          transform: translate(0, -50%);
-          opacity: 0;
+          transform: translate(0, -20%);
+          opacity: 0.5;
+          color: #fff;
         }
-        15% {
+ 
+        25% {
           transform: translate(0, 50%);
-          opacity: 0.5;
-        }
-        30% {
-          transform: translate(0, 65%);
           opacity: 1;
+          color: red;
         }
-        45% {
-          transform: translate(0, 65%);
+      
+        50% {
+          transform: translateX(0%, 50%);
           opacity: 1;
+          color: gold;
         }
-        55% {
-          transform: translate(0%, 90%);
+        75% {
+          transform: translateX(0%, 150%);
           opacity: 1;
-        }
-        60% {
-          transform: translateX(0%, 200%);
-          opacity: 1;
-        }
-        80% {
-          transform: translateX(0%, 250%);
-          opacity: 0.5;
+          color: red;
         }
       
         100% {
-          transform: translate(0%, 300%);
+          transform: translate(0%, 250%);
           opacity: 0;
         }
       }
@@ -43,29 +76,57 @@
 
 
 
+//.slide-text animation PC
+//@mixin animationTransformPc  {
+  //  @keyframes transform {
+   //     0% {
+     //       transform: translate(0%, -30%);
+    //        opacity: 0;
+      //    }
+     //     25% {
+      //      transform: translate(0%, 0%);
+       //     opacity: 1;
+       //   }
+       //   50% {
+        //    transform: translate(0%, 50%);
+        //    opacity: 1;
+        //  }
+        //  80% {
+        //    transform: translate(0%, 80%);
+        //    opacity: 1;
+        //  }
+         // 100% {
+         //   transform: translate(0%, 100%);
+         //   opacity: 0;
+         // }
+     // }
 
-//.slide-text animation smartphones
-@mixin animationTransformPc  {
+    
+  //}
+
+
+  @mixin animationTransformPc  {
     @keyframes transform {
         0% {
-            transform: translate(0%, -30%);
+            transform: translate(-100%, 150%);
             opacity: 0;
           }
           25% {
-            transform: translate(0%, 0%);
+            transform: translate(-50%, 150%);
             opacity: 1;
           }
           50% {
-            transform: translate(0%, 50%);
+            transform: translate(0%, 150%);
             opacity: 1;
           }
-          80% {
-            transform: translate(0%, 80%);
+          75% {
+            transform: translate(0%, 150%);
             opacity: 1;
           }
           100% {
-            transform: translate(0%, 100%);
-            opacity: 0;
+            transform: translate(120%, 150%);
+            opacity: 1;
+           
           }
       }
 
@@ -108,3 +169,31 @@
 
   }
   }
+
+//.slide-text animation galery
+@mixin slide{
+  animation: slide-ani 30s infinite;
+  @keyframes slide-ani {
+  25% {
+    background-image: url("/src/image/salon-hiver.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+  50% {
+    background-image: url("/src/image/passio\ dar\ bibine.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+  75% {
+    background-image: url("/src/image/entree dar bibine.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+
+  100% {
+    background-image: url("/src/image/raum-sweet-entree.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+}
+}

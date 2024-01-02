@@ -75,64 +75,56 @@ header .slide-text {
 }
 @keyframes transform {
   0% {
-    transform: translate(0, -50%);
-    opacity: 0;
+    transform: translate(0, -20%);
+    opacity: 0.5;
+    color: #fff;
   }
-  15% {
+  25% {
     transform: translate(0, 50%);
-    opacity: 0.5;
-  }
-  30% {
-    transform: translate(0, 65%);
     opacity: 1;
+    color: red;
   }
-  45% {
-    transform: translate(0, 65%);
+  50% {
+    transform: translateX(0%, 50%);
     opacity: 1;
+    color: gold;
   }
-  55% {
-    transform: translate(0%, 90%);
+  75% {
+    transform: translateX(0%, 150%);
     opacity: 1;
-  }
-  60% {
-    transform: translateX(0%, 200%);
-    opacity: 1;
-  }
-  80% {
-    transform: translateX(0%, 250%);
-    opacity: 0.5;
+    color: red;
   }
   100% {
-    transform: translate(0%, 300%);
+    transform: translate(0%, 250%);
     opacity: 0;
   }
 }
 @media only screen and (min-width:768px) {
   @keyframes transform {
     0% {
-      transform: translate(0%, -30%);
+      transform: translate(-100%, 150%);
       opacity: 0;
     }
     25% {
-      transform: translate(0%, 0%);
+      transform: translate(-50%, 150%);
       opacity: 1;
     }
     50% {
-      transform: translate(0%, 50%);
+      transform: translate(0%, 150%);
       opacity: 1;
     }
-    80% {
-      transform: translate(0%, 80%);
+    75% {
+      transform: translate(0%, 150%);
       opacity: 1;
     }
     100% {
-      transform: translate(0%, 100%);
-      opacity: 0;
+      transform: translate(120%, 150%);
+      opacity: 1;
     }
   }
 }
 header .slide-text p {
-  font-size: font-size 1.4rem;
+  font-size: 1.2rem;
   font-family: "Open Sans";
 }
 header .slide-text p:nth-child(2) {
@@ -187,7 +179,8 @@ main .menu {
   right: 0;
   height: 100%;
 }
-main .menu li, main .menu a {
+main .menu li,
+main .menu a {
   padding-top: 10px;
 }
 @media only screen and (min-width:768px) {
@@ -197,7 +190,7 @@ main .menu li, main .menu a {
   }
   main .menu li,
   main .menu a {
-    font-size: font-size 1rem;
+    font-size: 3rem;
   }
 }
 main .menu .hidden {
@@ -205,7 +198,7 @@ main .menu .hidden {
   width: 100%;
   display: flex;
   flex-direction: column;
-  font-size: font-size 3rem;
+  font-size: 3rem;
 }
 @media only screen and (min-width:768px) {
   main .menu .hidden {
@@ -222,7 +215,7 @@ main .menu .hidden {
   }
 }
 main .menu .hidden a {
-  font-size: font-size 1.4rem;
+  font-size: 1.2rem;
   font-family: "Duru Sans";
   padding: 0 15px;
   color: #07152e;
@@ -233,8 +226,8 @@ main .menu .hidden a:hover {
   color: red;
 }
 @media only screen and (min-width: 1024px) {
-  main .menu .hidden a:hover {
-    font-size: font-size 1.6rem;
+  main .menu .hidden a {
+    font-size: 1.6rem;
   }
 }
 main .checkbtn {
@@ -243,7 +236,7 @@ main .checkbtn {
   top: 50px;
 }
 main .checkbtn i {
-  font-size: font-size 2rem;
+  font-size: 2rem;
 }
 @media only screen and (min-width: 1024px) {
   main .checkbtn {
@@ -355,14 +348,14 @@ main #home {
 @media only screen and (min-width: 1024px) {
   .container .text h2,
   .container .text span a {
-    font-size: font-size 1.6rem;
+    font-size: 1.6rem;
   }
 }
 .container .text p {
   line-height: 1.5;
   text-align: justify;
   overflow: auto;
-  font-size: font-size 0.8rem;
+  font-size: 0.8rem;
   color: #07152e;
   text-align: center;
   margin: auto;
@@ -372,7 +365,7 @@ main #home {
 }
 @media only screen and (min-width:768px) {
   .container .text p {
-    font-size: font-size 1.2rem;
+    font-size: 1.2rem;
     line-height: 1.5;
     text-align: justify;
     overflow: auto;
@@ -381,7 +374,7 @@ main #home {
 }
 @media only screen and (min-width: 1024px) {
   .container .text p {
-    font-size: font-size 1.4rem;
+    font-size: 1.4rem;
     line-height: 1.5;
     text-align: justify;
     overflow: auto;
@@ -404,37 +397,38 @@ footer .kontakt {
 }
 footer .kontakt h3 {
   color: #07152e;
-  font-size: font-size 0.8rem;
+  font-size: 1rem;
   font-family: "poppins";
 }
 @media only screen and (min-width:768px) {
   footer .kontakt h3 {
-    color: #07152e;
-    font-size: font-size 1rem;
+    font-size: 1.2rem;
   }
 }
 @media only screen and (min-width: 1024px) {
   footer .kontakt h3 {
-    color: #fff;
+    color: #07152e;
+    font-size: 1.2rem;
   }
 }
 footer .kontakt p {
   color: #07152e;
-  font-size: font-size 0.8rem;
+  font-size: 0.8rem;
   font-family: "poppins";
   line-height: 1;
   text-align: justify;
+  padding-top: 15px;
 }
 footer .kontakt .icons {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  font-size: font-size 1rem;
+  font-size: 1rem;
   padding-top: 10px;
 }
 @media only screen and (min-width:768px) {
   footer .kontakt .icons p {
-    font-size: font-size 1rem;
+    font-size: 1rem;
     padding-top: 15px;
     color: #07152e;
     font-family: "poppins";
@@ -442,7 +436,7 @@ footer .kontakt .icons {
 }
 @media only screen and (min-width: 1024px) {
   footer .kontakt .icons p {
-    font-size: font-size 1rem;
+    font-size: 1rem;
     padding-top: 25px;
     color: var(--primary);
   }
@@ -532,14 +526,14 @@ header .btn a {
 }
 .container-grid .box p {
   color: white;
-  font-size: font-size 1.2rem;
+  font-size: 1.2rem;
   font-family: "poppins";
   text-align: center;
 }
 .container-grid .box h3 {
   color: gold;
   text-align: center;
-  font-size: font-size 1.2rem;
+  font-size: 1.2rem;
   font-family: "poppins";
 }
 @media only screen and (min-width:768px) {
@@ -604,7 +598,7 @@ main .room-contain .contain {
 main .room-contain .contain h2 {
   padding-top: 50px;
   color: #07152e;
-  font-size: font-size 1.6rem;
+  font-size: 1.6rem;
   font-family: "Open Sans";
   text-align: center;
 }
@@ -615,12 +609,14 @@ main .room-contain .contain .room {
   gap: 4px;
   margin: 20px;
 }
-main .room-contain .contain .room .box, main .room-contain .contain .room img {
+main .room-contain .contain .room .box,
+main .room-contain .contain .room img {
   width: 100%;
   height: 100%;
   transition: scale 1.5s ease-in 0.3s;
 }
-main .room-contain .contain .room .box:hover, main .room-contain .contain .room img:hover {
+main .room-contain .contain .room .box:hover,
+main .room-contain .contain .room img:hover {
   scale: 1.3;
   border-radius: 5px;
 }
@@ -698,4 +694,140 @@ main .room-contain .contain .room .box-3-7 {
      object-fit: cover;
   -o-object-position: top;
      object-position: top;
+}
+.contain-galery {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contain-galery .pc {
+  width: 100%;
+  border: solid red 2px;
+}
+@media only screen and (min-width:768px) {
+  .contain-galery .pc {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.contain-galery .slider {
+  width: 60%;
+  height: 400px;
+  background-image: url("/src/image/Sauna dar bibine.jpg");
+  background-position: center;
+  background-size: cover;
+  margin: 100px auto;
+  animation: slide-ani 30s infinite;
+}
+@media only screen and (min-width:768px) {
+  .contain-galery .slider {
+    width: 40%;
+  }
+}
+@keyframes slide-ani {
+  25% {
+    background-image: url("/src/image/salon-hiver.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+  50% {
+    background-image: url("/src/image/passio dar bibine.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+  75% {
+    background-image: url("/src/image/entree dar bibine.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+  100% {
+    background-image: url("/src/image/raum-sweet-entree.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+}
+.contain-galery .container-slider-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+@media only screen and (min-width:768px) {
+  .contain-galery .container-slider-2 {
+    width: 45%;
+  }
+}
+.contain-galery .container-slider-2 .slider-2 {
+  width: 55%;
+  margin: auto;
+  overflow: hidden;
+}
+.contain-galery .container-slider-2 .slider-2 .images {
+  display: flex;
+  width: 100%;
+  border: solid white 2px;
+  border: 2px solid red;
+}
+.contain-galery .container-slider-2 .slider-2 .images img {
+  height: 400px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  transition: all 1s ease;
+}
+.contain-galery .container-slider-2 .slider-2 .images input {
+  display: none;
+}
+.contain-galery .container-slider-2 .slider-2 .dots {
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+}
+.contain-galery .container-slider-2 .slider-2 .dots label {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: solid #07152e 3px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  margin: 5px;
+}
+.contain-galery .container-slider-2 .slider-2 #img1:checked ~ .m1 {
+  margin-left: 0;
+}
+.contain-galery .container-slider-2 .slider-2 #img2:checked ~ .m2 {
+  margin-left: -100%;
+}
+.contain-galery .container-slider-2 .slider-2 #img3:checked ~ .m3 {
+  margin-left: -200%;
+}
+.contain-galery .container-slider-2 .slider-2 #img4:checked ~ .m4 {
+  margin-left: -300%;
+}
+.contain-galery .container-slider-2 .slider-2 .dots label:hover {
+  background-color: #07152e;
+}
+.contain-galery .text {
+  width: 70%;
+  margin: auto;
+  background-color: #07152e;
+  margin-top: 50px;
+  box-shadow: 5px 5px 20px #07152e;
+}
+.contain-galery .text p {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  color: white;
+  font-size: 1rem;
+  font-family: "poppins";
+  line-height: 1.5;
+  text-align: start;
+  overflow: auto;
 }/*# sourceMappingURL=style.css.map */
