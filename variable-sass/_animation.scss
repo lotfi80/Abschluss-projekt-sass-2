@@ -39,7 +39,7 @@
 
     
   //}
-  //.slide-text animation smartphones
+  
   @mixin animationTransformSmar {
     @keyframes transform {
         0% {
@@ -51,18 +51,18 @@
         25% {
           transform: translate(0, 50%);
           opacity: 1;
-          color: red;
+         // color: red;
         }
       
         50% {
           transform: translateX(0%, 50%);
           opacity: 1;
-          color: gold;
+          //color: gold;
         }
         75% {
           transform: translateX(0%, 150%);
           opacity: 1;
-          color: red;
+        // color: red;
         }
       
         100% {
