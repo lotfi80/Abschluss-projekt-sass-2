@@ -82,7 +82,6 @@ main {
     a {
       padding-top: 10px;
     }
-  
 
     @media #{$medium-up} {
       display: flex;
@@ -91,7 +90,6 @@ main {
       a {
         font-size: $font-xxl;
       }
-   
     }
     .hidden {
       margin-top: 10px;
@@ -217,7 +215,7 @@ main {
     span a {
       text-align: center;
       padding-top: 10px;
-      color: gold;
+      color: $red;
       font-family: "Open Sans";
       @media #{$large-up} {
         font-size: $font-l;
@@ -234,6 +232,9 @@ main {
       padding-top: 10px;
       overflow: hidden;
       font-family: "poppins";
+      em{
+        color: purple;
+      }
       @media #{$medium-up} {
         font-size: $font-m;
         line-height: 1.5;
@@ -328,7 +329,6 @@ footer {
 }
 
 // Index-surrounding-area page 2
-
 
 .container-grid {
   @include gridContaineSmart;
@@ -426,31 +426,29 @@ main {
         width: 40%;
       }
       h2 {
-        
         padding-top: 50px;
         color: $primary;
         font-size: $font-l;
         font-family: "Open Sans";
         text-align: center;
         position: relative;
-        
-        &:after{
+
+        &:after {
           content: "";
           width: 0;
           height: 0;
-          border-top: 5px solid $primary ;
+          border-top: 5px solid $primary;
           border-left: 10px solid transparent;
           border-right: 10px solid transparent;
           position: absolute;
           bottom: -5px;
-          left: calc(48% );
-          }
+          left: calc(48%);
+        }
       }
       .room {
         @include gridRooms;
         margin: 20px;
-        .box
-        img {
+        .box img {
           width: 100%;
           height: 100%;
           transition: scale 1.5s ease-in 0.3s;
@@ -484,6 +482,8 @@ main {
           color: $color-font;
           background-color: $primary;
           transition: scale 1.5s ease-in 0.3s;
+          text-align: center;
+          padding: 5px;
           &:hover {
             scale: 1.3;
             border-radius: 5px;
@@ -600,37 +600,33 @@ main {
   justify-content: center;
   align-items: center;
   border-bottom: solid $primary 2px;
-  h2{
+  h2 {
     font-size: $font-l;
     margin: 40px 0;
     padding: 10px 50px;
     border: solid $primary 2px;
     position: relative;
-    &:after{
-    content: "";
-    width: 0;
-    height: 0;
-    border-top: 5px solid $primary ;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    position: absolute;
-    bottom: -20px;
-    left: calc(45% );
+    &:after {
+      content: "";
+      width: 0;
+      height: 0;
+      border-top: 5px solid $primary;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      position: absolute;
+      bottom: -20px;
+      left: calc(45%);
     }
   }
-  .pc{
+  .pc {
     width: 100%;
-   
-    
-   
+
     @media #{$medium-up} {
       display: flex;
       flex-direction: row;
-    align-items: center; 
-  justify-content: center;}
-     
-      
-  
+      align-items: center;
+      justify-content: center;
+    }
   }
   .slider {
     width: 60%;
@@ -640,80 +636,73 @@ main {
     background-size: cover;
     margin: 100px auto;
     @media #{$medium-up} {
-      width: 40%; }
-    
+      width: 40%;
+    }
 
     @include slide;
   }
   .container-slider-2 {
-   
     display: flex;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
     @media #{$medium-up} {
-      width: 45%; }
-    
-    .slider-2{
+      width: 45%;
+    }
+
+    .slider-2 {
       width: 55%;
-    margin: auto;
+      margin: auto;
       overflow: hidden;
-      
-        
-    
 
-       .images {
-      display: flex;
-      width: 100%;
-      border: solid white 2px;
-      border: 2px solid red;
-      img {
-        height: 400px;
+      .images {
+        display: flex;
         width: 100%;
-        object-fit: cover;
-        object-position: center;
-        transition: all 1s ease;
+        border: solid white 2px;
+        border: 2px solid red;
+        img {
+          height: 400px;
+          width: 100%;
+          object-fit: cover;
+          object-position: center;
+          transition: all 1s ease;
+        }
+        input {
+          display: none;
+        }
       }
-      input {
-        display: none;
+      .dots {
+        display: flex;
+        justify-content: center;
+        margin: 5px;
       }
-    } 
-    .dots {
-      display: flex;
-      justify-content: center;
-      margin: 5px;
-    }
-    .dots label {
-      height: 20px;
-      width: 20px;
-      border-radius: 50%;
-      border: solid #07152e 3px;
-      cursor: pointer;
-      transition: all 0.15s ease;
-      margin: 5px;
-    }
+      .dots label {
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        border: solid #07152e 3px;
+        cursor: pointer;
+        transition: all 0.15s ease;
+        margin: 5px;
+      }
 
-  #img1:checked ~ .m1  {
-      margin-left: 0;
-    }
-    #img2:checked ~ .m2 {
-      margin-left: -100%;
-    }
-    #img3:checked ~ .m3 {
-      margin-left: -200%;
-    }
-    #img4:checked ~ .m4 {
-      margin-left: -300%;
-    }
+      #img1:checked ~ .m1 {
+        margin-left: 0;
+      }
+      #img2:checked ~ .m2 {
+        margin-left: -100%;
+      }
+      #img3:checked ~ .m3 {
+        margin-left: -200%;
+      }
+      #img4:checked ~ .m4 {
+        margin-left: -300%;
+      }
 
-    .dots label:hover {
-      background-color: #07152e;
-    }  
-  
+      .dots label:hover {
+        background-color: #07152e;
+      }
     }
-   
-   
-   
   }
   .text {
     width: 50%;
@@ -721,19 +710,178 @@ main {
     background-color: #07152e;
     margin: 50px 0;
     box-shadow: 5px 5px 20px #07152e;
-    
-    
+
     p {
-    width: 50%;
-    margin: auto;
-    text-align: center;
-    color: white;
-    font-size: 1rem;
-    font-family: "poppins";
-    line-height: 1.5;
-    text-align: start;
-    overflow: auto;
-   
-  }
+      width: 50%;
+      margin: auto;
+      text-align: center;
+      color: white;
+      font-size: 1rem;
+      font-family: "poppins";
+      line-height: 1.5;
+      text-align: start;
+      overflow: auto;
+    }
   }
 }
+
+
+// Kontakt Seite 
+.container-K {
+  display: flex;
+  width: 100%;
+  p,
+h2 {
+  text-align: center;
+  font-size: 1rem;
+  font-family: "Open Sans";
+}
+  .map {
+    width: 60%;
+    
+    iframe {
+      width: 100%;
+    }
+  }
+  
+  .adresse {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    background-color: #9cc0f9;
+    padding-bottom: 30px;
+    font-size: 0.8rem;
+    font-family: "Open Sans";
+    .p,h2{
+      text-align: center;
+      font-size: 1rem;
+      font-family: "poppins";
+      
+    }    .icons {
+      font-size: 0.8rem; 
+      @media #{$medium-up} {
+        font-size: 1.4rem;
+      }
+  
+       i {
+      padding-right: 5px;
+    }
+    }
+  
+  }
+}
+
+// Kontakt /* container 2 */
+.container-2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @media #{$medium-up} {
+    display: flex;
+    flex-direction: row;
+  }
+
+  /* background-color: var(--primary); */
+  padding-top: 10px;
+  .links {
+    /* display: flex; */
+    width: 100%;
+    padding-bottom: 30px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @media #{$medium-up} {
+      width: 50%;
+      font-size: 1.2rem;
+    }
+    h2 {
+      color: white;
+      font-size: 1.2rem;
+      font-family: "Open Sans";
+    }
+    table {
+      font-size: 1rem;
+      width: 80%;
+      margin-top: 20px;
+      font-family: "poppins";
+      @media #{$medium-up} {
+        height: 80%;
+        font-size: 1.2rem;
+      }
+      th,
+    
+td {
+  padding: 10px;
+  text-align: left;
+  width: 33%;
+  height: 60px;
+  text-align: center;
+}
+tr {
+}
+thead th:first-child {
+  border-radius: 20px 0px 0px 0px;
+}
+thead th:last-child {
+  border-radius: 0px 20px 0px 0px;
+}
+tbody tr:last-child td:first-child {
+  border-radius: 0px 0px 0px 20px;
+}
+tbody tr:last-child td:last-child {
+  border-radius: 0px 0px 20px 0px;
+}
+
+th {
+  background-color: #0084f7;
+}
+td {
+  background-color: #9cbbec;
+}
+    }
+    
+  }
+}
+
+form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  background-color: #9cbbec;
+  font-family: "poppins";
+  @media #{$medium-up} {
+    width: 600px;
+  }
+  label {
+    display: block;
+    margin-bottom: 8px;
+  }
+  input,
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+}
+button {
+  background-color: #0084f7;
+  color: #fff;
+  padding: 10px 50px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  &:hover {
+    background-color: #45a049;
+  }
+}
+

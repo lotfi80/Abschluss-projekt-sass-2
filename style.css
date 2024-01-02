@@ -359,7 +359,7 @@ main #home {
 .container .text span a {
   text-align: center;
   padding-top: 10px;
-  color: gold;
+  color: red;
   font-family: "Open Sans";
 }
 @media only screen and (min-width: 1024px) {
@@ -379,6 +379,9 @@ main #home {
   padding-top: 10px;
   overflow: hidden;
   font-family: "poppins";
+}
+.container .text p em {
+  color: purple;
 }
 @media only screen and (min-width:768px) {
   .container .text p {
@@ -654,6 +657,8 @@ main .room-contain .contain .room p {
   color: #fff;
   background-color: #07152e;
   transition: scale 1.5s ease-in 0.3s;
+  text-align: center;
+  padding: 5px;
 }
 main .room-contain .contain .room .box:hover,
 main .room-contain .contain .room p:hover {
@@ -857,4 +862,162 @@ main .room-contain .contain .room .box-3-7 {
   line-height: 1.5;
   text-align: start;
   overflow: auto;
+}
+
+.container-K {
+  display: flex;
+  width: 100%;
+}
+.container-K p,
+.container-K h2 {
+  text-align: center;
+  font-size: 1rem;
+  font-family: "Open Sans";
+}
+.container-K .map {
+  width: 60%;
+}
+.container-K .map iframe {
+  width: 100%;
+}
+.container-K .adresse {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  background-color: #9cc0f9;
+  padding-bottom: 30px;
+  font-size: 0.8rem;
+  font-family: "Open Sans";
+}
+.container-K .adresse .p, .container-K .adresse h2 {
+  text-align: center;
+  font-size: 1rem;
+  font-family: "poppins";
+}
+.container-K .adresse .icons {
+  font-size: 0.8rem;
+}
+@media only screen and (min-width:768px) {
+  .container-K .adresse .icons {
+    font-size: 1.4rem;
+  }
+}
+.container-K .adresse .icons i {
+  padding-right: 5px;
+}
+
+.container-2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: var(--primary); */
+  padding-top: 10px;
+}
+@media only screen and (min-width:768px) {
+  .container-2 {
+    display: flex;
+    flex-direction: row;
+  }
+}
+.container-2 .links {
+  /* display: flex; */
+  width: 100%;
+  padding-bottom: 30px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (min-width:768px) {
+  .container-2 .links {
+    width: 50%;
+    font-size: 1.2rem;
+  }
+}
+.container-2 .links h2 {
+  color: white;
+  font-size: 1.2rem;
+  font-family: "Open Sans";
+}
+.container-2 .links table {
+  font-size: 1rem;
+  width: 80%;
+  margin-top: 20px;
+  font-family: "poppins";
+}
+@media only screen and (min-width:768px) {
+  .container-2 .links table {
+    height: 80%;
+    font-size: 1.2rem;
+  }
+}
+.container-2 .links table th,
+.container-2 .links table td {
+  padding: 10px;
+  text-align: left;
+  width: 33%;
+  height: 60px;
+  text-align: center;
+}
+.container-2 .links table thead th:first-child {
+  border-radius: 20px 0px 0px 0px;
+}
+.container-2 .links table thead th:last-child {
+  border-radius: 0px 20px 0px 0px;
+}
+.container-2 .links table tbody tr:last-child td:first-child {
+  border-radius: 0px 0px 0px 20px;
+}
+.container-2 .links table tbody tr:last-child td:last-child {
+  border-radius: 0px 0px 20px 0px;
+}
+.container-2 .links table th {
+  background-color: #0084f7;
+}
+.container-2 .links table td {
+  background-color: #9cbbec;
+}
+
+form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  background-color: #9cbbec;
+  font-family: "poppins";
+}
+@media only screen and (min-width:768px) {
+  form {
+    width: 600px;
+  }
+}
+form label {
+  display: block;
+  margin-bottom: 8px;
+}
+form input,
+form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #0084f7;
+  color: #fff;
+  padding: 10px 50px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #45a049;
 }/*# sourceMappingURL=style.css.map */
